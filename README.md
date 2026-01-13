@@ -1,0 +1,3 @@
+Brick Breaker is a recreation of the classic Arkanoid game, built using vanilla JavaScript.
+## Coming Soon
+ - More features are planned and will be added soon...

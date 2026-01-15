@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Brick Breaker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="bg2">
+        <div id="game-container">
+            <div class="test">
+                <div class="title">BRICK BREAKER</div>
+            </div>
+
+            <div id="instruction">
+                <h3 class="text">- Press "S" to start</h3>
+                <h3 class="text">- Use &lt;- and -&gt; to move</h3>
+                <br>
+                <h3 class="text">- Press "P" to pause</h3>
+                <h3 class="text">- Press "R" to restart</h3>
+            </div>
+
+            <div id="counters">
+                <span id="score">Score: 0</span>
+                <span id="count">Timer: 0s</span>
+                <span id="lives">Lives: 3</span>
+            </div>
+
+            <div class="grid">
+                <div class="menu" id="pauseMenu">
+                    <h2>PAUSED</h2>
+                    <p>Press S to Continue</p>
+                    <p>Press R to Restart</p>
+                </div>
+                <div class="winMenu" id="winMenu">
+                    <h2>YOU WIN!</h2>
+                    <p>Press R to Play Again</p>
+                </div>
+                <div class="loseMenu" id="loseMenu">
+                    <h2>GAME OVER</h2>
+                    <p>Press R to Try Again</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <audio id="bgMusic" loop>
+    <source src="js/music.mp3" type="audio/mpeg">
+    <script  src="js/brickbreaker.js"></script>
+</audio>
+</body>
+</html>

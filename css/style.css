@@ -1,0 +1,123 @@
+        body {
+            margin: 0;
+            overflow: hidden; 
+            background-color: black;
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        .bg2 {
+  background-image: url('https://images.unsplash.com/photo-1534796636912-3b95b3ab5986?q=80&w=2071&auto=format&fit=crop');            color: white;
+            display: flex;
+            height: 100vh;
+            width: 100vw;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #game-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transform-origin: center center;
+            transition: transform 0.1s; 
+        }
+
+        .title {
+            font-size: 35px;
+            margin-bottom: 10px;
+            color: #ff00ff;
+            text-shadow: 3px 3px #fff;
+            text-align: center;
+        }
+
+        #instruction {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #ccc;
+        }
+
+        .text {
+            font-size: 10px;
+            margin: 5px 0;
+            font-weight: normal;
+            line-height: 1.5;
+        }
+
+        #counters {
+            display: flex;
+            gap: 30px;
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: #ffff00;
+        }
+
+        .grid {
+            position: relative;
+            width: 560px;
+            height: 300px;
+            border: solid 4px rgb(255, 255, 255);
+            background-color: #1a1a1a;
+            overflow: hidden;
+        }
+
+        .user {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100px;
+            height: 20px;
+            background-color: rgb(0, 255, 255);
+            will-change: transform; 
+        }
+
+        .block {
+            position: absolute;
+            width: 100px;
+            height: 20px;
+            background-color: rgb(219, 181, 255);
+        }
+
+        .ball {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: rgb(255, 255, 255);
+            will-change: transform;
+        }
+
+        .removed {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .menu, .winMenu, .loseMenu {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            
+            background-color: rgb(99, 218, 2);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            border: 4px solid white;
+            border-radius: 10px;
+            padding: 20px;
+            z-index: 10;
+            width: 320px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.7);
+        }
+
+        .menu h2, .winMenu h2, .loseMenu h2 {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .menu p, .winMenu p, .loseMenu p {
+            font-size: 10px;
+            line-height: 2;
+        }

@@ -4,8 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Brick Breaker</title>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <style>
+        .menu button, .winMenu button, .loseMenu button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-family: inherit;
+            background: #fff;
+            border: 2px solid #000;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .menu button:hover, .winMenu button:hover, .loseMenu button:hover {
+            background: #ddd;
+        }
+        /* Zid hado bach t-optimiser performance */
+        .user, .ball, .block {
+            will-change: transform; 
+        }
+    </style>
 </head>
 <body>
 
@@ -16,11 +34,9 @@
             </div>
 
             <div id="instruction">
-                <h3 class="text">- Press "S" to start</h3>
-                <h3 class="text">- Use &lt;- and -&gt; to move</h3>
-                <br>
-                <h3 class="text">- Press "P" to pause</h3>
-                <h3 class="text">- Press "R" to restart</h3>
+                <h3 class="text">- Press "S" to Start</h3>
+                <h3 class="text">- Use Arrows < and > to Move</h3>
+                <h3 class="text">- Press "P" to Pause</h3>
             </div>
 
             <div id="counters">
@@ -29,26 +45,30 @@
                 <span id="lives">Lives: 3</span>
             </div>
 
-            <div class="grid">
-                <div class="menu" id="pauseMenu">
+            <div class="grid">                
+                <div class="menu" id="pauseMenu" style="display: none;">
                     <h2>PAUSED</h2>
-                    <p>Press S to Continue</p>
-                    <p>Press R to Restart</p>
+                    <button id="btnContinue">Continue</button>
+                    <button id="btnRestart">Restart</button>
                 </div>
-                <div class="winMenu" id="winMenu">
+
+                <div class="winMenu" id="winMenu" style="display: none;">
                     <h2>YOU WIN!</h2>
-                    <p>Press R to Play Again</p>
+                    <p id="finalScoreWin"></p>
+                    <button id="btnRestartWin">Play Again</button>
                 </div>
-                <div class="loseMenu" id="loseMenu">
+                <div class="loseMenu" id="loseMenu" style="display: none;">
                     <h2>GAME OVER</h2>
-                    <p>Press R to Try Again</p>
+                    <button id="btnRestartLose">Try Again</button>
                 </div>
             </div>
         </div>
     </div>
+
     <audio id="bgMusic" loop>
-    <source src="js/music.mp3" type="audio/mpeg">
-    <script  src="js/brickbreaker.js"></script>
-</audio>
+        <source src="js/music.mp3" type="audio/mpeg">
+    </audio>
+
+    <script type="module" src="js/app.js" defer ></script>
 </body>
 </html>

@@ -145,3 +145,19 @@
     transform: translate(2px, 2px);
     box-shadow: 1px 1px 0px rgba(0,0,0,0.5);
 }
+        .menu button, .winMenu button, .loseMenu button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-family: inherit;
+            background: #fff;
+            border: 2px solid #000;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .menu button:hover, .winMenu button:hover, .loseMenu button:hover {
+            background: #ddd;
+        }
+        .user, .ball, .block {
+            will-change: transform; 
+        }
